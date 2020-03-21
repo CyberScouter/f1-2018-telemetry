@@ -11,7 +11,8 @@ lazy val server = (project in file("server"))
     libraryDependencies ++= Seq(
       "com.vmunier" %% "scalajs-scripts" % "1.1.4",
       guice,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+      "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
+      "org.scalamock" %% "scalamock" % "4.4.0" % Test,
     ),
     // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
     EclipseKeys.preTasks := Seq(compile in Compile)
